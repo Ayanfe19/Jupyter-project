@@ -36,3 +36,8 @@ kubectl logs --namespace jupyter ${pod_name}
 kubectl port-forward --namespace jupyter ${pod_name} 8888:8888
 ```
 
+### Clean up
+```
+kubectl delete deployments --namespace jupyter jupyter
+```
+
