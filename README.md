@@ -9,6 +9,12 @@ visualization. It is used by students and scientists around the world to build a
 explore data and data visualizations.
 
 ## SET UP
+This simple project can be done on minikube.
+
+### Set up a cluster on minikube
+```
+minikube start
+```
 
 ### Create a Namespace to hold the Jupyter Application
 ```
