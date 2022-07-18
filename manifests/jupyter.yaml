@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: jupyter
+ labels:
+  app: jupyter
+ namespace: jupyter
+spec:
+ replicas: 1
+ selector:
+  matchLabels:
+    app: jupyter
+ template:
+  metadata:
+    labels:
+      app: jupyter
+  spec:
+    containers:
+    - image: jupyter/scipy-notebook:abdb27a6dfbb
+      name: jupyter
+      resources:
+        limits:
+          memory: 512Mi
+        requests:
+          memory: 256Mi
+    dnsPolicy: ClusterFirst
+    restartPolicy: Always
